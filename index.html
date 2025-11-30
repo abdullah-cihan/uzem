@@ -3,27 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UZEM Asistanı</title>
+    <title>UZEM Asistanı - Canlı Sohbet</title> 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="chat-container">
-        <div class="chat-header">
+    <div id="chat-widget" class="chat-container">
+        
+        <header class="chat-header">
             <img src="logo.png" alt="UZEM Logo" class="logo">
-        </div>
-        <div class="chat-messages" id="chat-messages">
+            <h1>UZEM Asistanı</h1> 
+        </header>
+
+        <main id="chat-messages" class="chat-messages">
             <div class="message bot">
                 <p>Merhaba! Ben UZEM Asistanı. Size nasıl yardımcı olabilirim?</p>
             </div>
-        </div>
-        <div class="chat-input-area">
-            <input type="text" id="user-input" placeholder="Sorunuzu buraya yazın..." autocomplete="off">
-            <button id="send-button">→</button>
-        </div>
-        <div class="footer">
-            Öğr. Gör. Abdullah CİHAN
-        </div>
+            </main>
+
+        <form class="chat-input-area" id="chat-form">
+            <input type="text" id="user-input" placeholder="Sorunuzu buraya yazın..." autocomplete="off" required>
+            <button type="submit" id="send-button" aria-label="Gönder">
+                <span class="icon">→</span>
+            </button>
+        </form>
+
+        <footer class="chat-footer">
+            <p>Geliştirici: Öğr. Gör. Abdullah CİHAN</p>
+        </footer>
+        
     </div>
 
     <script src="script.js"></script>
